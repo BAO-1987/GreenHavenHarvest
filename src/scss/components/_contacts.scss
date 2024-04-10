@@ -1,0 +1,65 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.contacts {
+  &__wrapper {
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    label {
+      width: 100%;
+    }
+
+    input {
+      position: relative;
+      border: 1px solid var(--color-dark-800);
+      border-radius: calc(var(--radius-main) * 4);
+      padding: 16px;
+      width: 100%;
+      max-width: 100%;
+      font-weight: var(--fw-700);
+      font-size: 14px;
+      line-height: 1.86;
+      background-color: var(--color-white);
+    }
+  }
+
+  h2 {
+    margin-bottom: rem(48);
+    font-size: clamp(1.5rem, 1rem + 2.2222vi, 3rem);
+    line-height: 1.06;
+    text-align: left;
+    color: var(--color-blue-800);
+  }
+
+  @include media(tablet) {
+    padding: 30px 0;
+
+    h2 {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__wrapper {
+      flex-direction: column;
+
+      .btn {
+        max-width: 100%;
+      }
+    }
+
+    &__image {
+      width: 100%;
+      aspect-ratio: 18/9;
+    }
+  }
+}

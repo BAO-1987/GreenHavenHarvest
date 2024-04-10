@@ -1,0 +1,21 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.mission {
+  &__inner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: calc(var(--radius-main) * 4);
+  }
+
+  p {
+    margin-bottom: rem(48);
+    font-size: clamp(1rem, 0.9167rem + 0.3704vi, 1.25rem);
+  }
+}

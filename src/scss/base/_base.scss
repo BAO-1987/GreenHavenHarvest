@@ -1,0 +1,115 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+html,
+body {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+}
+
+.page {
+  height: var(--vh);
+  font-family: var(--font-family-primary);
+  font-weight: var(--fw-500);
+  font-style: normal;
+  font-size: clamp(16px, 1vw, 20px);
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--color-dark-800);
+  background-color: var(--color-violet-100);
+  font-optical-sizing: auto;
+  scroll-padding: var(--header-height);
+
+  &__body {
+    position: relative;
+    min-width: 320px;
+    min-height: var(--vh);
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-color: rgba(39, 40, 43, 0.75);
+      opacity: 0;
+      transition: opacity 0.3s;
+      inset: 0;
+    }
+  }
+
+  &.open {
+    overflow: hidden;
+
+    > .page__body::before {
+      z-index: 5;
+      opacity: 1;
+    }
+  }
+}
+
+.section {
+  padding: rem(112) 0;
+
+  @include media(tablet) {
+    padding: 30px 0;
+  }
+}
+
+.container,
+.wrapper {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+.wrapper {
+  max-width: 1064px;
+}
+
+.site-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr auto;
+  min-height: var(--vh);
+}
+
+.main {
+  padding-top: var(--header-height);
+}
+
+.logo {
+  margin-right: rem(150);
+  width: 100%;
+  max-width: 210px;
+
+  @include media(tablet-wide) {
+    margin-right: 16px;
+  }
+}
+
+.is-scrolling {
+  scrollbar-color: var(--color-green-400) var(--color-white);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-green-400);
+  }
+
+  @include media(tablet-wide) {
+    overflow-y: scroll;
+    padding: 15px;
+  }
+}

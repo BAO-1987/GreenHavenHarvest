@@ -1,0 +1,80 @@
+/* stylelint-disable declaration-no-important */
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+*[class].btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: calc(var(--radius-main) * 4);
+  padding: 15px 45px;
+  width: 100%;
+  height: max-content;
+  max-width: fit-content;
+  font-weight: var(--fw-600);
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-white);
+  background-color: var(--color-green-400);
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-green-400);
+    color: var(--color-green-400);
+    background-color: var(--color-white);
+  }
+
+  &.formsapp-button {
+    margin: 0;
+    font-family: var(--font-family-primary) !important;
+  }
+
+  &--reverse {
+    border-color: var(--color-green-400);
+    padding: 13px 32px;
+    font-weight: var(--fw-400);
+    line-height: 1.11;
+    color: var(--color-green-400);
+    background-color: var(--color-white);
+
+    &:hover,
+    &:focus {
+      color: var(--color-white);
+      background-color: var(--color-green-400);
+    }
+  }
+
+  &--article {
+    border-color: var(--color-dark-800);
+    padding: 16px 24px;
+    max-width: 100%;
+    color: var(--color-dark-800);
+    background-color: transparent;
+  }
+
+  &--request {
+    color: var(--color-white) !important;
+    background-color: var(--color-green-400) !important;
+
+    &:hover,
+    &:focus {
+      border-color: var(--color-green-400);
+      color: var(--color-green-400) !important;
+      background-color: var(--color-white) !important;
+    }
+  }
+
+  &--sign {
+    color: var(--color-green-900);
+    background-color: var(--color-white);
+
+    &:hover,
+    &:focus {
+      color: var(--color-white);
+      background-color: var(--color-green-400);
+    }
+  }
+}

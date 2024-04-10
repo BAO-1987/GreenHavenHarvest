@@ -1,0 +1,14 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.products {
+  &__content {
+    margin-bottom: rem(48);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}

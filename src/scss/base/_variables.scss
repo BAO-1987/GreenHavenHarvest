@@ -1,0 +1,32 @@
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable color-function-notation */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --content-width: 1216px;
+  --container-offset: 16px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // font-family
+  --font-family-primary: "Inter", sans-serif;
+
+  // font-weight
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+
+  //
+  --color-white: #fff;
+  --color-violet-100: #f0e9e1;
+  --color-violet-50: #f2f0ec;
+  --color-green-400: #1c8026;
+  --color-dark-800: #333;
+  --color-dark-900: #2e2e2e;
+  --color-grey-10: #eceef2;
+
+  //  radius
+  --radius-main: 8px;
+}

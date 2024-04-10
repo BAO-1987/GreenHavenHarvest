@@ -1,0 +1,21 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.footer {
+  padding: rem(112) 0 24px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
+  }
+
+  p {
+    opacity: 1;
+  }
+}

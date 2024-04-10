@@ -1,0 +1,56 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.advantages {
+  $root: &;
+
+  &__content {
+    margin-bottom: rem(48);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  &__item {
+    overflow: hidden;
+    border-radius: calc(var(--radius-main) * 4);
+    padding: 24px;
+    background-color: var(--color-white);
+
+    &::before {
+      content: "";
+      position: relative;
+      display: block;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-image: url("../images/icons/locally.svg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: var(--color-grey-10);
+    }
+
+    &--locally {
+      &::before {
+        background-image: url("../images/icons/locally.svg");
+      }
+    }
+
+    &--organic {
+      &::before {
+        background-image: url("../images/icons/heart.svg");
+      }
+    }
+
+    &--practices {
+      &::before {
+        background-image: url("../images/icons/practices.svg");
+      }
+    }
+  }
+}
