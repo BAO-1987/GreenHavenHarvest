@@ -12,6 +12,7 @@
   width: 100%;
   height: max-content;
   max-width: fit-content;
+  white-space: nowrap;
   font-weight: var(--fw-600);
   font-size: 16px;
   line-height: 1;
@@ -56,6 +57,7 @@
   }
 
   &--request {
+    padding: 8px 24px;
     color: var(--color-white) !important;
     background-color: var(--color-green-400) !important;
 
@@ -68,7 +70,9 @@
   }
 
   &--sign {
-    color: var(--color-green-900);
+    border-color: var(--color-dark-800);
+    padding: 8px 24px;
+    color: var(--color-dark-800);
     background-color: var(--color-white);
 
     &:hover,
