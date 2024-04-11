@@ -1,0 +1,34 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.practices {
+  &__content {
+    margin-bottom: 48px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  &__item {
+    overflow: hidden;
+    border-radius: calc(var(--radius-main) * 4);
+    padding: 24px;
+    background-color: var(--color-white);
+  }
+
+  h3 {
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin-bottom: 48px;
+  }
+
+  img {
+    margin-bottom: 16px;
+    border-radius: calc(var(--radius-main) * 4);
+  }
+}

@@ -1,0 +1,20 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.catalog {
+  &__swiper {
+    overflow: hidden;
+
+    .swiper-slide {
+      height: auto;
+    }
+  }
+
+  &__list {
+    margin-bottom: rem(48);
+  }
+
+  h2 {
+    margin-bottom: rem(48);
+  }
+}

@@ -1,0 +1,38 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.positive {
+  &__inner {
+    position: relative;
+  }
+
+  &__content {
+    position: absolute;
+    left: 32px;
+    top: 20px;
+    overflow: hidden;
+    border-radius: calc(var(--radius-main) * 4);
+    padding: 32px;
+    width: 100%;
+    max-width: 505px;
+    background-color: var(--color-white);
+  }
+
+  p {
+    &:first-of-type {
+      margin-bottom: 32px;
+    }
+  }
+
+  span {
+    font-weight: var(--fw-700);
+  }
+
+  h2 {
+    margin-bottom: 48px;
+  }
+
+  img {
+    border-radius: calc(var(--radius-main) * 3);
+  }
+}

@@ -24,7 +24,7 @@
 
   &__item {
     &:not(:last-of-type) {
-      margin-right: 36px;
+      margin-right: 32px;
 
       @include media(tablet-wide) {
         margin-right: 15px;
@@ -53,7 +53,7 @@
   &__btns {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
   }
 
   @include media(tablet-wide) {

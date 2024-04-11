@@ -5,7 +5,7 @@
   $root: &;
 
   overflow: hidden;
-  border-radius: calc(var(--radius-main) * 4);
+  border-radius: calc(var(--radius-main) * 3);
 
   &__inner {
     display: flex;
@@ -18,7 +18,7 @@
   }
 
   &__content {
-    padding-left: 32px;
+    padding-left: 16px;
     width: 100%;
     max-width: 646px;
   }

@@ -24,7 +24,7 @@
       content: "";
       position: relative;
       display: block;
-      margin-bottom: 15px;
+      margin-bottom: 32px;
       border-radius: 50%;
       width: 80px;
       height: 80px;
@@ -70,6 +70,22 @@
         background-image: url("../images/icons/standarts.svg");
       }
     }
+
+    &--recycling {
+      &::before {
+        background-image: url("../images/icons/recycling.svg");
+      }
+    }
+
+    &--energy {
+      &::before {
+        background-image: url("../images/icons/energy.svg");
+      }
+    }
+  }
+
+  h3 {
+    margin-bottom: 9px;
   }
 
   &--about {
