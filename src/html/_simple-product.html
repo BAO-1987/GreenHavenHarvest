@@ -1,39 +1,101 @@
 <article class="product">
 
-  <div class="wrapper">
+  <h1>
+    {{sr-title}}
+  </h1>
+
+  <div class="container">
+
+    <div class="product__content">
+      <h2>
+        {{title}}
+      </h2>
+
+      <p>
+        {{text}}
+      </p>
+    </div>
 
     <div class="product__inner">
 
-      <img src="./images/article/{{images}}.jpg" alt="{{desc}}" width="504" height="370" loading="lazy" />
+      <img src="./images/article/{{images}}.jpg" alt="{{desc}}" width="596" height="551" loading="lazy" />
 
-      <div class="product__content">
+      <div class="product__desc">
 
-        <a class="product__link" href="product.html#filter">Back</a>
-
-        <h1>
-          {{title}}
-        </h1>
-
-        <span class="product__categories">
-          {{categories}}
-        </span>
+        <h2>
+        Description
+        </h2>
 
         <p>
-          {{text}}
+          {{des-text}}
         </p>
 
-        <ul class="product__list">
+        <div class="product__specification">
+          <h2>
+            Specifications
+          </h2>
+        </div>
 
+        <ul>
           <li>
-            Packaging: <span>{{packaging}}</span>
+            Weight: {{weight}}
           </li>
 
           <li>
-            Origin: <span>Earth Best Harvest farms</span>
+            Size: {{size}}
+          </li>
+
+          <li>
+            Packaging: {{packaging}}
+          </li>
+
+          <li>
+            Nutritional Information: {{nutritional}}
           </li>
         </ul>
 
       </div>
+
+    </div>
+
+    <div class="product__benefits">
+
+      <h2>
+        Benefits
+      </h2>
+
+      <ul>
+        <li>
+          <h3>
+            {{title-1}}
+          </h3>
+
+          <p>
+            {{text-1}}
+          </p>
+        </li>
+
+        <li>
+          <h3>
+            {{title-2}}
+          </h3>
+
+          <p>
+            {{text-2}}
+          </p>
+        </li>
+
+        <li>
+          <h3>
+            {{title-3}}
+          </h3>
+
+          <p>
+            {{text-3}}
+          </p>
+        </li>
+      </ul>
+
     </div>
 
   </div>

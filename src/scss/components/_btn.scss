@@ -77,4 +77,34 @@
       background-color: var(--color-green-400);
     }
   }
+
+  &--slider {
+    position: relative;
+    z-index: 2;
+    border-color: transparent;
+    padding: 0;
+    height: 32px;
+    max-width: 32px;
+    background-color: transparent;
+
+    &::before {
+      @include mask;
+
+      mask-image: url("../images/icons/arrow.svg");
+      mask-position: 0 0;
+      width: 13px;
+      height: 18px;
+      background-color: var(--color-dark-800);
+    }
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: transparent;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
 }

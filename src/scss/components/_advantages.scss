@@ -52,5 +52,27 @@
         background-image: url("../images/icons/practices.svg");
       }
     }
+
+    &--mission {
+      &::before {
+        background-image: url("../images/icons/mission.svg");
+      }
+    }
+
+    &--eco {
+      &::before {
+        background-image: url("../images/icons/like.svg");
+      }
+    }
+
+    &--standarts {
+      &::before {
+        background-image: url("../images/icons/standarts.svg");
+      }
+    }
+  }
+
+  &--about {
+    padding: 24px 0 rem(112);
   }
 }

@@ -1,0 +1,81 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.story {
+  &__content {
+    margin-bottom: rem(48);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: rem(88);
+  }
+
+  &__item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    gap: 24px;
+  }
+
+  &__desc {
+    h3 {
+      margin-bottom: 16px;
+      font-size: clamp(1.25rem, 1rem + 1.1111vi, 2rem);
+    }
+  }
+
+  img {
+    overflow: hidden;
+    border-radius: calc(var(--radius-main) * 4);
+    width: 100%;
+    height: 100%;
+  }
+
+  
+
+  // @include media(tablet) {
+  //   &__list {
+  //     grid-template-columns: 1fr;
+  //     gap: 24px;
+  //   }
+
+  //   &__item {
+  //     grid-template-columns: repeat(2, 1fr);
+  //   }
+
+  //   &__block {
+  //     min-height: max-content;
+
+  //     img {
+  //       object-position: center;
+  //       aspect-ratio: 16/9;
+  //     }
+
+  //     &--colored {
+  //       padding: 24px;
+  //     }
+  //   }
+  // }
+
+  @include media(mobile-l) {
+    &__list {
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__block {
+      &--colored {
+        padding: 16px;
+        grid-row: 1 / span 1;
+      }
+    }
+  }
+}
