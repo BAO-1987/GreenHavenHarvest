@@ -3,7 +3,7 @@
 
 .eco {
   padding-top: 112px;
-  
+
   &__content {
     margin-bottom: 48px;
   }
@@ -17,7 +17,7 @@
   &__images {
     img {
       overflow: hidden;
-      border-radius: calc(var(--radius-main) * 4);
+      border-radius: calc(var(--radius-main) * 3);
     }
   }
 

@@ -14,4 +14,8 @@
   &.hide {
     transform: translateY(-200%);
   }
+
+  @include media(tablet) {
+    padding: 15px 0;
+  }
 }

@@ -1,4 +1,4 @@
-<article class="product">
+<article class="product section">
 
   <h1 class="sr-only">
     {{srTitle}}
@@ -22,37 +22,39 @@
 
       <div class="product__desc">
 
-        <h2>
-        Description
-        </h2>
+        <h3>
+          Description
+        </h3>
 
         <p>
           {{desText}}
         </p>
 
         <div class="product__specification">
-          <h2>
+          <h3>
             Specifications
-          </h2>
+          </h3>
+
+
+          <ul>
+            <li>
+              Weight: {{weight}}
+            </li>
+
+            <li>
+              Size: {{size}}
+            </li>
+
+            <li>
+              Packaging: {{packaging}}
+            </li>
+
+            <li>
+              Nutritional Information: {{nutritional}}
+            </li>
+          </ul>
+
         </div>
-
-        <ul>
-          <li>
-            Weight: {{weight}}
-          </li>
-
-          <li>
-            Size: {{size}}
-          </li>
-
-          <li>
-            Packaging: {{packaging}}
-          </li>
-
-          <li>
-            Nutritional Information: {{nutritional}}
-          </li>
-        </ul>
 
       </div>
 

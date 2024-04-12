@@ -10,12 +10,35 @@
   }
 
   &__image {
-    overflow: hidden;
-    border-radius: calc(var(--radius-main) * 4);
+    img {
+      border-radius: calc(var(--radius-main) * 4);
+      width: 100%;
+    }
   }
 
   p {
     margin-bottom: rem(48);
     font-size: clamp(1rem, 0.9167rem + 0.3704vi, 1.25rem);
+  }
+
+  @include media(tablet) {
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    img {
+      object-position: center;
+      aspect-ratio: 18/9;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media(mobile-m) {
+    .btn {
+      max-width: 100%;
+    }
   }
 }

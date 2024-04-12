@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+<include src="./html/_head.html" locals='{"title": "Organic Butter"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+    <include src="./html/_header.html" locals='{"page": ""}'></include>
+
+    <main class="main">
+
+      <include src="./html/_simple-product.html" locals='{
+        "srTitle": "Organic Butter",
+        "title": "Organic Butter",
+        "text": "Dairy Products Category",
+        "images": "butter_big",
+        "desc": "Homemade Organic Yogurt",
+        "desText": "Our Organic Butter is a testament to the purity and simplicity of traditional butter-making processes, enhanced with modern standards of organic farming. Made exclusively from the cream of cows that graze on organic pastures, our butter has a natural golden hue, indicative of the high beta-carotene content in their diet. These cows are raised without the use of synthetic hormones or antibiotics, ensuring that every pat of butter is as wholesome as it is delicious. The butter is churned to perfection, achieving a creamy consistency that melts beautifully into your favorite dishes. Whether you`re baking, frying, or spreading, our Organic Butter adds a touch of gourmet to any meal.",
+        "weight": "250 grams per block",
+        "size": "Conveniently sized for kitchen use",
+        "packaging": "Compostable paper wrap",
+        "nutritional": "High in vitamins A and E, fatty acids, and butyrate",
+        "title1": "Environmentally Responsible",
+        "text1": "Free from artificial additives, for a clean, wholesome taste.",
+        "title2": "Healthier Choice",
+        "text2": "Higher in beneficial nutrients and vitamins.",
+        "title3": "Superior Taste",
+        "text3": "Richer flavor for culinary excellence."
+    }'></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

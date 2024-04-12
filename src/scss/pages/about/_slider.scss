@@ -4,12 +4,9 @@
 .slider {
   overflow: hidden;
 
-  &__content {
-    margin-bottom: rem(48);
-  }
-
+  &__content,
   &__list {
-    margin-bottom: 48px;
+    margin-bottom: rem(48);
   }
 
   &__item {
@@ -18,8 +15,8 @@
 
   &__desc {
     position: absolute;
-    top: 32px;
     left: 32px;
+    top: 32px;
     border-radius: calc(var(--radius-main) * 4);
     padding: 32px;
     width: 100%;
@@ -54,7 +51,7 @@
 
     .btn {
       &.swiper-button-disabled {
-       opacity: 0.2;
+        opacity: 0.2;
         pointer-events: none;
       }
 
@@ -75,5 +72,29 @@
 
   img {
     border-radius: calc(var(--radius-main) * 3);
+  }
+
+  @include media(tablet) {
+    &__content,
+    &__list {
+      margin-bottom: 30px;
+    }
+
+    &__desc {
+      padding: 16px;
+    }
+  }
+
+  @include media(mobile-l) {
+    img {
+      margin-bottom: 24px;
+    }
+
+    &__desc {
+      position: relative;
+      padding-top: 24px;
+      max-width: 100%;
+      inset: 0;
+    }
   }
 }

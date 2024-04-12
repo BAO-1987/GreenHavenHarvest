@@ -36,12 +36,11 @@
     font-size: 16px;
     line-height: 1.18;
     white-space: nowrap;
-    transition: color 0.3s linear;
+    transition: color 0.3s linear text-shadow 0.3s linear;
 
     &:hover {
-      &::before {
-        transform: scale(1);
-      }
+      text-shadow: 0.4px 0.4px 0 currentcolor;
+      color: var(--color-dark-900);
     }
 
     &.true {
@@ -63,9 +62,7 @@
   }
 
   @include media(tablet) {
-    padding: 16px 0;
-
-    .nav__inner {
+    &__inner {
       position: fixed;
       right: 0;
       top: 0;
@@ -77,7 +74,7 @@
       width: 100%;
       height: var(--vh);
       max-width: 350px;
-      background-color: var(--color-green-100);
+      background-color: var(--color-violet-100);
       transform: translateX(150%);
       transition-property: transform;
       transition-duration: 0.4s;

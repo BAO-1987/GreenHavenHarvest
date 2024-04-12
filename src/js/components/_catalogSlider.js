@@ -4,7 +4,8 @@ import Swiper, {
 } from 'swiper';
 
 const slider = new Swiper('.catalog__swiper', {
-  slidesPerView: 3,
+  slidesPerView: 'auto',
+   centeredSlides: true,
   spaceBetween: 24,
   modules: [Navigation, Pagination],
   draggable: true,

@@ -49,21 +49,20 @@ body {
 .section {
   padding: rem(112) 0;
 
+  @include media(tablet-wide) {
+    padding: 60px 0;
+  }
+
   @include media(tablet) {
     padding: 30px 0;
   }
 }
 
-.container,
-.wrapper {
+.container {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   width: 100%;
   max-width: var(--container-width);
-}
-
-.wrapper {
-  max-width: 1064px;
 }
 
 .site-container {
@@ -84,32 +83,5 @@ body {
 
   @include media(tablet-wide) {
     margin-right: 16px;
-  }
-}
-
-.is-scrolling {
-  scrollbar-color: var(--color-green-400) var(--color-white);
-  scrollbar-width: thin;
-
-  &::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
-
-  &::-webkit-scrollbar-track {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-color: var(--color-white);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-color: var(--color-green-400);
-  }
-
-  @include media(tablet-wide) {
-    overflow-y: scroll;
-    padding: 15px;
   }
 }

@@ -6,24 +6,35 @@
 
   overflow: hidden;
   border-radius: calc(var(--radius-main) * 3);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   &__inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 652px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   &__content {
     padding-left: 16px;
     width: 100%;
-    max-width: 646px;
+    max-width: 660px;
   }
 
   &--home {
     color: var(--color-white);
+  }
+
+  @include media(tablet) {
+    &__inner {
+      min-height: 350px;
+    }
+
+    &__content {
+      padding: 16px;
+      max-width: 100%;
+    }
   }
 }

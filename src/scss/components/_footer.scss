@@ -18,4 +18,27 @@
   p {
     opacity: 1;
   }
+
+  @include media(tablet-wide) {
+    padding-top: 60px;
+  }
+
+  @include media(tablet) {
+    padding-top: 30px;
+
+    &__list {
+      gap: 16px;
+    }
+  }
+
+  @include media(mobile-l) {
+    padding-top: 0;
+
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
 }

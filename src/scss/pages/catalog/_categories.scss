@@ -9,10 +9,17 @@
   }
 
   &__item {
+    position: relative;
     overflow: hidden;
     border-radius: calc(var(--radius-main) * 4);
     padding: 24px;
     background-color: var(--color-white);
+
+    &:hover {
+      h3 {
+        color: var(--color-green-400);
+      }
+    }
   }
 
   h2 {
@@ -21,5 +28,37 @@
 
   h3 {
     margin-bottom: 8px;
+  }
+
+  @include media(tablet) {
+    &__content {
+      margin-bottom: 30px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      padding: 16px;
+
+      &:last-child {
+        grid-column: 2 span;
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      padding: 16px;
+
+      &:last-child {
+        grid-column: auto;
+      }
+    }
   }
 }

@@ -97,4 +97,40 @@
   &--about {
     padding: 24px 0 rem(112);
   }
+
+  @include media(tablet) {
+    &__content {
+      margin-bottom: 30px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      padding: 16px;
+
+      &:last-child {
+        grid-column: 2 span;
+      }
+    }
+
+    &--about {
+      padding-bottom: 30px;
+    }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      padding: 16px;
+
+      &:last-child {
+        grid-column: auto;
+      }
+    }
+  }
 }
