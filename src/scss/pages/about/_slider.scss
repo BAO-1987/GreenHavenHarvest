@@ -54,17 +54,17 @@
 
     .btn {
       &.swiper-button-disabled {
-        background-color: var(--color-gray-600);
+       opacity: 0.2;
         pointer-events: none;
       }
 
       &--prev {
-        left: 8px;
+        left: -24px;
         scale: -1 1;
       }
 
       &--next {
-        right: 8px;
+        right: -24px;
       }
 
       @include media(mobile-m) {
@@ -74,6 +74,6 @@
   }
 
   img {
-    border-radius: calc(var(--radius-main) * 4);
+    border-radius: calc(var(--radius-main) * 3);
   }
 }

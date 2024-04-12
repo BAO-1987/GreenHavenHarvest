@@ -82,6 +82,12 @@
         background-image: url("../images/icons/energy.svg");
       }
     }
+
+    &--certified {
+      &::before {
+        background-image: url("../images/icons/certified.svg");
+      }
+    }
   }
 
   h3 {

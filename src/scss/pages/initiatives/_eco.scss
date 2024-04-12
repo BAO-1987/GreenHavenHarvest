@@ -1,31 +1,35 @@
 @use "../../utils/functions/" as *;
 @use "../../utils/mixins/" as *;
 
-.practices {
+.eco {
+  padding-top: 112px;
+  
   &__content {
     margin-bottom: 48px;
   }
 
-  &__list {
+  &__inner {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
 
-  &__item {
+  &__images {
+    img {
+      overflow: hidden;
+      border-radius: calc(var(--radius-main) * 4);
+    }
+  }
+
+  &__desc {
     overflow: hidden;
     border-radius: calc(var(--radius-main) * 4);
     padding: 24px;
     background-color: var(--color-white);
+  }
 
-    img {
-      margin-bottom: 26px;
-      border-radius: calc(var(--radius-main) * 4);
-    }
-
-    h3 {
-      margin-bottom: 8px;
-    }
+  h3 {
+    margin-bottom: 8px;
   }
 
   p {
