@@ -4,9 +4,8 @@ import Swiper, {
 } from 'swiper';
 
 const slider = new Swiper('.catalog__swiper', {
-  slidesPerView: 'auto',
-   centeredSlides: true,
-  spaceBetween: 24,
+  slidesPerView: 1,
+  spaceBetween: 10,
   modules: [Navigation, Pagination],
   draggable: true,
   grabCursor: true,
@@ -17,5 +16,35 @@ const slider = new Swiper('.catalog__swiper', {
 
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  breakpoints: {
+
+    375: {
+      slidesPerView: 1,
+    },
+
+     549: {
+       slidesPerView: 1.2,
+     },
+
+    650: {
+      slidesPerView: 2,
+    },
+
+    768: {
+      slidesPerView: 2,
+    },
+
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+
+    // 1600: {
+    //   slidesPerView: 3,
+    //   spaceBetween: 24,
+    // },
   },
 });

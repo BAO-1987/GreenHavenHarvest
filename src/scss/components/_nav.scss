@@ -2,8 +2,6 @@
 @use "../utils/mixins/" as *;
 
 .nav {
-  $root: &;
-
   position: relative;
   display: flex;
   align-items: center;

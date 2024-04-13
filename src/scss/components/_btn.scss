@@ -12,10 +12,10 @@
   width: 100%;
   height: max-content;
   max-width: fit-content;
-  white-space: nowrap;
   font-weight: var(--fw-600);
   font-size: 16px;
   line-height: 1;
+  white-space: nowrap;
   color: var(--color-white);
   background-color: var(--color-green-400);
   transition-property: background-color, color, border-color;

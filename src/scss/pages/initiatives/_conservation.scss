@@ -3,7 +3,7 @@
 
 .conservation {
   &__content {
-    margin-bottom: 48px;
+    margin-bottom: rem(48);
     width: 100%;
     max-width: 580px;
   }
@@ -28,5 +28,23 @@
 
   h3 {
     margin-bottom: 8px;
+  }
+
+  @include media(tablet) {
+    &__content {
+      margin-bottom: 30px;
+      max-width: 100%;
+    }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      grid-template-columns: 1fr;
+
+      img {
+        object-position: center;
+        aspect-ratio: 18/9;
+      }
+    }
   }
 }

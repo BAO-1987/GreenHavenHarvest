@@ -21,6 +21,7 @@
     img {
       margin-bottom: 26px;
       border-radius: calc(var(--radius-main) * 4);
+      width: 100%;
     }
 
     h3 {
@@ -30,5 +31,48 @@
 
   p {
     margin-bottom: 48px;
+  }
+
+  @include media(tablet) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      padding: 16px;
+
+      img {
+        object-position: center;
+        aspect-ratio: 18/9;
+      }
+
+      &:last-child {
+        grid-column: 2 span;
+
+        h3 {
+          text-align: center;
+        }
+
+        img {
+          aspect-ratio: 18/9;
+        }
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      h3 {
+        text-align: center;
+      }
+
+      &:last-child {
+        grid-column: auto;
+      }
+    }
   }
 }

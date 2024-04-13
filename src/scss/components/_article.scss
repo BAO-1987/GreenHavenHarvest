@@ -2,8 +2,6 @@
 @use "../utils/mixins" as *;
 
 .article {
-  // width: 100%;
-  // max-width: 389px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,6 +29,7 @@
   img {
     margin-bottom: 26px;
     border-radius: calc(var(--radius-main) * 3);
+    width: 100%;
   }
 
   .btn {
@@ -39,15 +38,16 @@
 
   @include media(tablet) {
     padding: 16px;
-
-    // &__content {
-    //   height: fit-content;
-    // }
   }
 
   @include media(mobile-m) {
+    &__content {
+      height: fit-content;
+    }
+
     img {
+      object-position: center;
       aspect-ratio: 18/9;
     }
   }
-}
+} 

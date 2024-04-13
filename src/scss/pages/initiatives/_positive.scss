@@ -2,7 +2,7 @@
 @use "../../utils/mixins/" as *;
 
 .positive {
-  padding-bottom: 112px;
+  padding-bottom: rem(112);
 
   &__inner {
     position: relative;
@@ -14,7 +14,7 @@
     top: 20px;
     overflow: hidden;
     border-radius: calc(var(--radius-main) * 4);
-    padding: 32px;
+    padding: rem(32);
     width: 100%;
     max-width: 505px;
     background-color: var(--color-white);
@@ -36,5 +36,32 @@
 
   img {
     border-radius: calc(var(--radius-main) * 3);
+  }
+
+  @include media(tablet-wide) {
+    padding-bottom: 60px;
+
+    &__content {
+      top: 0;
+      padding: 16px;
+    }
+  }
+
+  @include media(tablet) {
+    padding-bottom: 30px;
+
+    &__content {
+      position: relative;
+      max-width: 100%;
+      inset: 0;
+    }
+
+    img {
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
   }
 }
