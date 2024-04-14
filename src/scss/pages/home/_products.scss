@@ -13,6 +13,10 @@
   }
 
   @include media(tablet) {
+    &__content {
+      margin-bottom: 30px;
+    }
+
     &__list {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -40,6 +44,10 @@
     &__item {
       h3 {
         text-align: center;
+      }
+
+      .article__content {
+        height: auto;
       }
 
       &:last-child {

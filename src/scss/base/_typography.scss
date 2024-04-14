@@ -11,7 +11,8 @@ h3 {
   line-height: 1.21;
 }
 
-h2 {
+h2,
+h3 {
   margin-bottom: 16px;
   font-weight: var(--fw-600);
   font-size: clamp(1.5rem, 1rem + 2.2222vi, 3rem);
@@ -20,9 +21,7 @@ h2 {
 
 h3 {
   margin-bottom: 9px;
-  font-weight: var(--fw-600);
   font-size: 24px;
-  line-height: 1.2;
 }
 
 p {

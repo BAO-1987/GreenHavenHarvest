@@ -10,6 +10,15 @@
 
   h1 {
     margin-bottom: rem(48);
+    font-weight: var(--fw-600);
+    font-size: clamp(1.5rem, 1rem + 2.2222vi, 3rem);
+    line-height: 1.2;
+  }
+
+  h2 {
+    margin-bottom: 9px;
+    font-size: 20px;
+    opacity: 0.6;
   }
 
   ul {
@@ -20,6 +29,7 @@
   li {
     padding-left: 10px;
     letter-spacing: 0.02em;
+    opacity: 0.6;
 
     &:not(:last-child) {
       margin-bottom: 3px;
@@ -32,6 +42,8 @@
   }
 
   p {
+    font-size: 20px;
+
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -42,11 +54,15 @@
     color: var(--color-green-400);
   }
 
-  @include media(mobile-l) {
+  @include media(mobile-tablet) {
     &__content {
       &:not(:last-child) {
         margin-bottom: 24px;
       }
+    }
+
+    h1 {
+      margin-bottom: 30px;
     }
   }
 }

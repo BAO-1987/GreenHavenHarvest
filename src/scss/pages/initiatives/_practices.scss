@@ -19,6 +19,7 @@
     background-color: var(--color-white);
 
     img {
+      overflow: hidden;
       margin-bottom: 26px;
       border-radius: calc(var(--radius-main) * 4);
       width: 100%;
@@ -34,6 +35,10 @@
   }
 
   @include media(tablet) {
+    &__content {
+      margin-bottom: 30px;
+    }
+
     &__list {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -54,7 +59,7 @@
         }
 
         img {
-          aspect-ratio: 18/9;
+          aspect-ratio: 2/1;
         }
       }
     }

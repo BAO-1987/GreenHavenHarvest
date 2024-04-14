@@ -23,6 +23,7 @@
   }
 
   img {
+    overflow: hidden;
     border-radius: calc(var(--radius-main) * 4);
   }
 
@@ -43,7 +44,7 @@
 
       img {
         object-position: center;
-        aspect-ratio: 18/9;
+        aspect-ratio: 2/1;
       }
     }
   }

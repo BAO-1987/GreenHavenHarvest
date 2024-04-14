@@ -23,7 +23,7 @@
   }
 
   h2 {
-    margin-bottom: 48px;
+    margin-bottom: rem(48);
   }
 
   h3 {
@@ -45,6 +45,10 @@
       &:last-child {
         grid-column: 2 span;
       }
+    }
+
+    h2 {
+      margin-bottom: 30px;
     }
   }
 

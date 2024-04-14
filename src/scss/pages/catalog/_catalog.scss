@@ -17,4 +17,10 @@
   h2 {
     margin-bottom: rem(48);
   }
+
+  @include media(tablet) {
+    h2 {
+      margin-bottom: 30px;
+    }
+  }
 }

@@ -120,6 +120,16 @@
     }
   }
 
+  @include media(mobile-l) {
+    &__item {
+      &::before {
+        margin-bottom: 16px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
   @include media(mobile-m) {
     &__list {
       grid-template-columns: 1fr;
